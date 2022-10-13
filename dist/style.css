@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 50px 0;
   font-family: "Montserrat", sans-serif;
   background-color: var(--Cream);
   min-height: 100vh;
@@ -44,15 +44,18 @@ a, a:visited, a:active {
 }
 
 .container {
-  height: 450px;
+  min-height: 450px;
   width: 650px;
   display: flex;
   background-color: white;
   border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0px 3px 30px var(--Dark-cyan);
 }
 .container__image-div {
   width: 50%;
-  height: 100%;
+  min-height: 450px;
   background: url(../images/image-product-desktop.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -61,20 +64,91 @@ a, a:visited, a:active {
 .container__main {
   width: 50%;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container__main .perf {
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+.container__main h2 {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container__main p {
+  line-height: 160%;
+  cursor: pointer;
+  color: var(--Dark-grayish-blue);
+}
+.container__main .priced {
+  color: var(--Dark-cyan);
+  font-size: 30px;
+  font-family: "Fraunces", serif;
+  display: flex;
+  align-items: center;
+}
+.container__main .priced .crossed {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+}
+.container__main button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: var(--Dark-cyan);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.container__main buttonhover {
+  color: red;
+}
+.container__main button img {
+  margin-right: 5px;
 }
 @media (max-width: 700px) {
   .container {
     flex-direction: column;
-    max-width: 300px;
+    max-width: 350px;
     min-height: 500px;
     margin: 0 20px;
   }
   .container__image-div {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     border-radius: 10px 10px 0 0;
     background: url(../images/image-product-mobile.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+  }
+  .container__main {
+    width: 100%;
+  }
+  .container__main h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 700px) and (max-width: 300px) {
+  .container__main h2 {
+    font-size: 21px;
+  }
+  .container__main p {
+    font-size: 12px;
+  }
+  .container__main button {
+    margin-top: -10px;
   }
 }/*# sourceMappingURL=style.css.map */
